@@ -1,0 +1,12 @@
+*~
+*.py[co]
+*.so
+*-eggs
+*.jar
+bin
+*.egg-info
+*.egg
+*sqlite3
+pip-log.txt
+file_based_cache
+.DS_Store

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Hi
+{% endblock %}
+
+{% block content %}
+Hello World
+
+{% load flatpages %}
+{% get_flatpages as flatpages %}
+<ul>
+    {% for page in flatpages %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
