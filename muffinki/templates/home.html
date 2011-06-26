@@ -1,18 +1,26 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Hi
+Muffiny.net
 {% endblock %}
 
-{% block content %}
-Hello World
+{% block content %}    
+ <div class="line"></div>
+<div class="text"> 
+	Muffiny to proste babeczki z ciasta pieczone w papilotkach i specjalnych formach szczególnie popularne w Wielkiej Brytanii i w Stanach Zjednoczonych. Na stronie muffiny.net znajdziesz przepisy na przeróżne muffinki od bakaliowych, przez kawowe i owocowe. Przepisy możesz też wydrukować w formacie PDF. Miłego pieczenia!
+	</div>
+  <div class="line"></div>
 
-{% load flatpages %}
-{% get_flatpages as flatpages %}
-<ul>
-    {% for page in flatpages %}
-        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-    {% endfor %}
+{% for fl in flat_pages %}
+
+<ul class="column">
+		{% for page in fl%}
+        <li><img src="{{ STATIC_URL }}/img/muffin_bullet.png" style="vertical-align: middle"/><a href="{{ page.url }}">{{ page.title }}</a></li>
+		{% endfor %}
 </ul>
+{% endfor %}    
 
-{% endblock %}
+<div class="clbl"></div>    
+
+{% endblock %}   
+

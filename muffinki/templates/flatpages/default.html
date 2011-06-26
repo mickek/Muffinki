@@ -4,6 +4,15 @@
 {{ flatpage.title }}
 {% endblock %}
 
-{% block content %}
-{{ flatpage.content }}
+{% block content %}  
+<div class="clbl"></div> 
+<div class="line"></div> 
+<div class="recipe">
+{{ flatpage.content }} 
+<p class="p-print"><a href="javascript:window.print()"><img src="{{ STATIC_URL }}img/print.png" alt="Drukuj"/> 
+Drukuj &nbsp;</a></p>                              
+<br/>
+</div>
+<div class="clbl"></div>  
+
 {% endblock %}

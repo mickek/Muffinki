@@ -1,0 +1,27 @@
+/* Reseting Styles */
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.4em;
+	word-spacing: 1px;
+	letter-spacing: 0.2px;
+	font: 13px Arial, Sans-serif; 
+	color: #000;   
+	background-color: #fff;
+} 
+
+.instructions {
+	line-height: 2em;
+	padding-top: 1em;
+}    
+
+/* Removing Extra Elements */
+#container, .line, body img, #footer, .p-print {
+	display: none;
+}   
+   
+.hidden {
+	display: inline;    
+	float: right;
+}    
+
