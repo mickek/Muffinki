@@ -47,7 +47,7 @@ def iterblocks(iterable, size, **kwds):
 
 def index(request):   
 	
-	flat_pages = FlatPage.objects.all()     
+	flat_pages = FlatPage.objects.exclude(url='/contact/')     
 	flat_pages = iterblocks(flat_pages, len(flat_pages)/2) 	
 
 	return render(request,'home.html', {'flat_pages': flat_pages})   
