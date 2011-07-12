@@ -169,7 +169,14 @@ body {
 .contact {
 	font: 500 25px/1.7 "Helvetica Neue", Helvetica, sans-serif;  
 	text-align: center;
-}    
+}  
+
+.contact a {
+	color: #fff;
+	background-color: #df778b;  
+	text-decoration: none; 
+	font-weight: bold;
+}  
 
 input {
 	border: 0;
@@ -181,4 +188,12 @@ input {
 
 input:hover {
 	cursor: hand;
+}  
+
+.bigger {
+	font-size: 30px;
+}       
+
+.biggest {
+	font-size: 35px; 
 }
