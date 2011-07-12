@@ -1,0 +1,12 @@
+#!/bin/bash    
+
+PID_FILE=/home/muffinki/django.pid
+PORT=8099
+SETTINGS=settings.defaults               
+
+OUTLOG=/var/log/muffinki/runfcgi.out.log
+ERRLOG=/var/log/muffinki/runfcgi.err.log
+                                    
+export DJANGO_SETTINGS_MODULE=$SETTINGS                            
+source /home/muffinki/muffiny/bin/activate
+exec python manage.py runfcgi host=127.0.0.1 port=$PORT pidfile=$PID_FILE --settings=$SETTINGS errlog=$ERRLOG outlog=$OUTLOG debug=true maxchildren=2 #maxspare=1
