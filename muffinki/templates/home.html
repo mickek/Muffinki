@@ -15,7 +15,7 @@ Muffiny.net
 
 <ul class="column">
 		{% for page in fl%}
-        <li><img src="{{ STATIC_URL }}/img/muffin_bullet.png" style="vertical-align: middle"/><a href="{{ page.url }}">{{ page.title }}</a></li>
+        <li><img src="{{ STATIC_URL }}/img/muffin_bullet.png" style="vertical-align: middle" alt="muffin recipe"/><a href="{{ page.url }}">{{ page.title }}</a></li>
 		{% endfor %}
 </ul>
 {% endfor %}    

@@ -103,7 +103,7 @@ body {
 	background-repeat: no-repeat; 
 	background-color: #fffbf5;    
 	font-size: 14px;
-}  
+}   
 
 .recipe h2 {          
 	font-family: inherit;
@@ -196,4 +196,18 @@ input:hover {
 
 .biggest {
 	font-size: 35px; 
+} 
+
+.p-comments {
+	font-family: sans-serif; 
+	font-size: 22px;
+	color: #df778b;
+	font-style: italic; 
+	padding-left: 90px;
+	margin-left: 20px;
+} 
+
+.fb-comments {
+	padding-left: 90px; 
+	margin-left: 20px;
 }

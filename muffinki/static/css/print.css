@@ -16,12 +16,16 @@ body {
 }    
 
 /* Removing Extra Elements */
-#container, .line, body img, #footer, .p-print {
+#container, .line, body img, #footer, .p-print, .p-comments, .fb, .fb-comments {
 	display: none;
-}   
-   
-.hidden {
-	display: inline;    
-	float: right;
-}    
+}      
+
+!important .fb-comments {
+	display: none;
+} 
+
+.logo {
+	display: inline; 
+	padding-bottom: 20px;   
+}
 
