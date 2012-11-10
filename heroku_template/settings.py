@@ -48,9 +48,18 @@ MEDIA_ROOT = ''
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 MEDIA_URL = ''
 
+#s3 settings
+AWS_ACCESS_KEY_ID = os.environ.get('S3_KEY', None)
+AWS_SECRET_ACCESS_KEY = os.environ.get('S3_SECRET', None)
+AWS_STORAGE_BUCKET_NAME = os.environ.get('S3_BUCKET', None)
+AWS_S3_CALLING_FORMAT = OrdinaryCallingFormat()
 
-STATIC_ROOT = os.path.join(ROOT_DIR, '..', 'collected_static')
-STATIC_URL = '/static/'
+
+MEDIA_ROOT = "/"
+MEDIA_URL = '//s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
+STATIC_ROOT = '/static/'
+STATIC_URL = '//s3.amazonaws.com/%s/static/' % AWS_STORAGE_BUCKET_NAME
+
 STATICFILES_DIRS = (
     os.path.join(ROOT_DIR, 'static'),
 )
@@ -145,12 +154,6 @@ LOGGING = {
         },
     }
 }
-
-#s3 settings
-AWS_ACCESS_KEY_ID = os.environ.get('S3_KEY', None)
-AWS_SECRET_ACCESS_KEY = os.environ.get('S3_SECRET', None)
-AWS_STORAGE_BUCKET_NAME = os.environ.get('S3_BUCKET', None)
-AWS_S3_CALLING_FORMAT = OrdinaryCallingFormat()
 
 #django-pipeline settings
 PIPELINE = not DEBUG
