@@ -147,9 +147,9 @@ LOGGING = {
 }
 
 #s3 settings
-AWS_ACCESS_KEY_ID = 'YOUR_KEY'
-AWS_SECRET_ACCESS_KEY = 'YOUR_SECRET_KEY'
-AWS_STORAGE_BUCKET_NAME = 'YOUR_S3_BUCKET'
+AWS_ACCESS_KEY_ID = os.environ.get('S3_KEY', None)
+AWS_SECRET_ACCESS_KEY = os.environ.get('S3_SECRET', None)
+AWS_STORAGE_BUCKET_NAME = os.environ.get('S3_BUCKET', None)
 AWS_S3_CALLING_FORMAT = OrdinaryCallingFormat()
 
 #django-pipeline settings
