@@ -56,7 +56,7 @@ AWS_S3_CALLING_FORMAT = OrdinaryCallingFormat()
 
 
 MEDIA_ROOT = "/"
-MEDIA_URL = 'http://s3.amazonaws.com/%s' % AWS_STORAGE_BUCKET_NAME
+MEDIA_URL = 'http://s3.amazonaws.com/%s/media' % AWS_STORAGE_BUCKET_NAME
 STATIC_ROOT = '/static/'
 STATIC_URL = 'http://s3.amazonaws.com/%s' % AWS_STORAGE_BUCKET_NAME
 
