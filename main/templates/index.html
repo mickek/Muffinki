@@ -3,9 +3,61 @@
 {% load markup %}
 {% load compressed %}
 
-{% block content %}	
+{% block css %}
+    {{block.super}}
+    {% compressed_css 'index' %}
+{% endblock %}
 
-	{% compressed_js 'others' %}
+{% block content %} 
 
-	{{readme|markdown}}
+    {% compressed_js 'index' %}
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="http://placehold.it/1500x300" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Muffiny Cytrynowe</h1>
+              <a class="btn btn-large btn-primary" href="#">Zobacz przepis</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="http://placehold.it/1500x300" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Muffiny Czekoladowe</h1>
+              <a class="btn btn-large btn-primary" href="#">Zobacz przepis</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="http://placehold.it/1500x300" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Muffiny Bananowe</h1>
+              <a class="btn btn-large btn-primary" href="#">Zobacz przepis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+    
+
+    <div class="container main">
+        
+        <p>Muffiny to proste babeczki z ciasta pieczone w papilotkach i specjalnych formach szczególnie popularne w Wielkiej Brytanii i w Stanach Zjednoczonych. Na stronie muffiny.net znajdziesz przepisy na przeróżne muffinki od bakaliowych, przez kawowe i owocowe. Przepisy możesz też wydrukować w formacie PDF. Miłego pieczenia!</p>
+        
+        <hr/>
+
+    </div>
+
+    
+
 {% endblock %}

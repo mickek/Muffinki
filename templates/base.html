@@ -43,27 +43,12 @@
            chromium.org/developers/how-tos/chrome-frame-getting-started -->
         <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-	   <div class="navbar navbar-inverse navbar-fixed-top">
-	      <div class="navbar-inner">
-	        <div class="container">
-	          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	          </a>
-	          <a class="brand" href="#">heroku template</a>
-	          <div class="nav-collapse collapse">
-	            <ul class="nav">
-	              <li class="active"><a href="{% url index %}">Home</a></li>
-	              <li><a href="{% url about %}">About</a></li>
-	            </ul>
-	          </div><!--/.nav-collapse -->
-	        </div>
-	      </div>
-	    </div>
-		<div class="container" role="main">
-			{% block content %}
-			{% endblock %}
-		</div>
+        <div class="container header">
+            <img src="{{ STATIC_URL }}/img/logo.png" alt="Muffiny Logo"/>
+        </div>
+
+
+		{% block content %}
+		{% endblock %}
     </body>
 </html>

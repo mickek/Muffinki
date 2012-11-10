@@ -159,8 +159,18 @@ PIPELINE_CSS = {
     'bootstrap': {
         'source_filenames': (
           'less/bootstrap/bootstrap.less',
+          'less/main.less',
         ),
         'output_filename': 'css/bootstrap.css',
+        'extra_context': {
+            'rel': 'stylesheet/less',
+        },
+    },
+    'index': {
+        'source_filenames': (
+          'less/index.less',
+        ),
+        'output_filename': 'css/index.min.css',
         'extra_context': {
             'rel': 'stylesheet/less',
         },
@@ -176,11 +186,12 @@ PIPELINE_JS = {
         ),
         'output_filename': 'js/core.min.js',
     },
-    'others': {
+    'index': {
         'source_filenames': (
-            'coffee/test.coffee',
+            'js/bootstrap-transition.js',
+            'js/bootstrap-carousel.js',
             ),
-        'output_filename': 'js/others.min.js',
+        'output_filename': 'js/index.min.js',
     }
 }
 
