@@ -1,10 +1,11 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, url, include
+from django.contrib import admin
+from django.views.generic import TemplateView
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+admin.autodiscover()
 
-urlpatterns = patterns('main.views',
-     url(r'^$', 'index', name='index'),
-     url(r'^about/$', 'about', name='about'),
+urlpatterns = patterns('',
+    url(r'^$', 'main.views.index', name='index'),
+    url(r'^kontakt/$', TemplateView.as_view(template_name="contact.html"), name='contact'),
+    url(r'^admin/', include(admin.site.urls)),
 )
