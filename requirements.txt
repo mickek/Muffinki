@@ -1,0 +1,11 @@
+Django
+markdown
+psycopg2
+dj-database-url
+gunicorn
+django-pipeline
+django-storages
+boto
+jsmin
+cssmin
+
