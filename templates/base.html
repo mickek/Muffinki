@@ -44,11 +44,19 @@
         <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
         <div class="container header">
-            <img src="{{ STATIC_URL }}/img/logo.png" alt="Muffiny Logo"/>
+            <a href="/"><img src="{{ STATIC_URL }}/img/logo.png" alt="Muffiny Logo"/></a>
         </div>
 
 
 		{% block content %}
 		{% endblock %}
+
+        <div class="container footer">
+            <hr/>
+            <a href="{% url contact %}" title="Kontakt">Kontakt</a>
+            &nbsp;/&nbsp;
+             Muffiny.net © 2011
+        </div>
+
     </body>
 </html>

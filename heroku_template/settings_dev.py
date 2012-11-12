@@ -1,5 +1,8 @@
 from settings import *
 
+STATIC_ROOT = os.path.join(ROOT_DIR, '..', 'collected_static')
+STATIC_URL = '/static/'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

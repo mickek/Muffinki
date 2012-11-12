@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load compressed %}
+
+{% block css %}
+    {{block.super}}
+    {% compressed_css 'contact' %}
+{% endblock %}
+
+
+{% block content %} 
+    <div class="container contact">
+        <h2>Pytania? Sugestie? Napisz do nas!</h2>
+        <img src="{{STATIC_URL}}img/contact.png" alt="Kontakt"/>
+
+        <p><a href="mailto:miaka@muffiny.net">&nbsp;miaka@muffiny.net&nbsp;</a></p>
+
+    </div>
+{% endblock %}

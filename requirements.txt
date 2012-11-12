@@ -8,4 +8,4 @@ django-storages
 boto
 jsmin
 cssmin
-
+itty
